@@ -158,7 +158,7 @@ def test_core_postgres_client_attendance_health(mock_config_file, mocker):
         MiddlewareSDKFacade.cache, "redis_status", return_value="up"
     )
 
-    result, status_code = DatabaseSDKFacade.database.attendance_health()
+    result, status_code = DatabaseSDKFacade().attendance_health()
 
     assert result == CustomMessage(
         message="Attendance API is running fine and ready to serve requests"

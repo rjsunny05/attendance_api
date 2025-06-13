@@ -11,4 +11,6 @@ from client.postgres.postgres_conn import CorePostgresClient
 # pylint: disable=too-few-public-methods
 class DatabaseSDKFacade:
     """Class wrapper method for client db related actions"""
-    database = CorePostgresClient()
+    @staticmethod
+    def get_database():
+        return CorePostgresClient()

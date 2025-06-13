@@ -94,3 +94,9 @@ class CorePostgresClient:
             return CustomMessage(
                 message="Attendance API is not healthy, please check logs",
             ), 400
+
+    # Add this at the **very end** of the file (after all class definitions)
+
+def get_connection():
+    """This is a placeholder. It will be mocked in tests."""
+    return CorePostgresClient()
